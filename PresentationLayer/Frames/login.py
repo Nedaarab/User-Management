@@ -1,4 +1,5 @@
-from tkinter import Frame ,Label, Entry, Button,messagebox
+from ttkbootstrap import Frame ,Label, Entry, Button
+from ttkbootstrap.dialogs import Messagebox
 from BusinessLogicLayer.user_business_logic import UserBusinessLogic
 
 class LoginFrame(Frame):
@@ -48,7 +49,7 @@ class LoginFrame(Frame):
             self.password_entry.delete(0,"end")
 
         else:
-            messagebox.showinfo("Error",f"{result.mesage}")
+            Messagebox.show_info(f"{result.mesage}","Error")
 
     def register(self):
         self.main_view.switch_frame("register")

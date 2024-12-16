@@ -1,4 +1,5 @@
-from tkinter import Frame,Button,Label,Entry,messagebox
+from ttkbootstrap import Frame,Button,Label,Entry
+from ttkbootstrap.dialogs import Messagebox
 from BusinessLogicLayer.user_business_logic import UserBusinessLogic
 
 class RegisterFrame(Frame):
@@ -47,6 +48,6 @@ class RegisterFrame(Frame):
 
         result=self.user_business_logic.register(first_name,last_name,username, password)
         if result.success:
-            messagebox.showinfo(None,f"{result.mesage}")
+            Messagebox.showinfo(None,f"{result.mesage}")
         else:
-            messagebox.showinfo("Error",f"{result.mesage}")
+            Messagebox.showinfo("Error",f"{result.mesage}")

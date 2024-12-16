@@ -1,13 +1,13 @@
 from PresentationLayer.Frames.home import HomeFrame
 from PresentationLayer.Frames.register import RegisterFrame
 from PresentationLayer.Frames.user_management import UserManagement
-from PresentationLayer.window import Window
+from PresentationLayer.window import MainWindow
 from PresentationLayer.Frames.login import LoginFrame
 
 
 class MainView:
     def __init__(self):
-        self.window = Window()
+        self.window = MainWindow()
         self.frames = {}
 
         self.add_frame("user_management", UserManagement(self.window, self))
